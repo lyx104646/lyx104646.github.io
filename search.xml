@@ -1,57 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/lyx104646.github.io.git/2022/07/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Java基础</title>
-    <url>/lyx104646.github.io.git/2019/04/10/Java%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h2 id="Java转义符"><a href="#Java转义符" class="headerlink" title="Java转义符"></a>Java转义符</h2><ul>
-<li>/n 换行</li>
-<li>/t 制表符</li>
-<li>\\ 一个斜杠</li>
-<li>\&#39;  一个 ‘</li>
-<li>\&quot; 一个 “</li>
-<li>\r 回车符</li>
-</ul>
-<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><p>两个字节，与Unicode码对应</p>
-<h2 id="java输入"><a href="#java输入" class="headerlink" title="java输入"></a>java输入</h2><p>使用扫描器 java.util.Scanner</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">//简单的文本扫描器</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Input</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String args[])</span>&#123;</span><br><span class="line">		<span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">		<span class="comment">//接受用户输入</span></span><br><span class="line">		System.out.println(<span class="string">&quot;请输入用户名字&quot;</span>);</span><br><span class="line">		<span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">		<span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line">		<span class="type">double</span> <span class="variable">salary</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line">		System.out.println(<span class="string">&quot;名字：&quot;</span> + name + <span class="string">&quot;,薪水：&quot;</span> + salary + <span class="string">&quot;,年龄：&quot;</span> + age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>数据类型… 变量</p>
-<ul>
-<li>代表零个或多个参数，本质是数组</li>
-<li>可变参数的实参可以是数组</li>
-<li>可变参数可以和其他参数一起放到形参列表，但只能在形参列表的最后</li>
-<li>一个形参列表中只能有一个可变参数</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">VarParameter</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">		<span class="type">int</span> a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>,d=<span class="number">4</span>;</span><br><span class="line">		<span class="type">VarParameter</span> <span class="variable">varParameter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">VarParameter</span>();</span><br><span class="line">		System.out.println(varParameter.sum(a,b,c,d));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span>... nums)</span>&#123;</span><br><span class="line">		<span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;++i)&#123;</span><br><span class="line">			res+=nums[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title></title>
-    <url>/lyx104646.github.io.git/2022/03/24/IDEA%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <url>/2022/03/24/IDEA%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>title: 。。</p>
 <h1 id="IDEA使用方法"><a href="#IDEA使用方法" class="headerlink" title="IDEA使用方法"></a>IDEA使用方法</h1><h2 id="IDEA常用快捷键"><a href="#IDEA常用快捷键" class="headerlink" title="IDEA常用快捷键"></a>IDEA常用快捷键</h2><ol>
 <li>删除当前行 Ctrl + Y  配置为Ctrl + D</li>
@@ -69,234 +20,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title>常用类</title>
-    <url>/lyx104646.github.io.git/2022/07/29/%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
-    <content><![CDATA[<h1 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h1><h2 id="包装类-Wrapper"><a href="#包装类-Wrapper" class="headerlink" title="包装类 Wrapper"></a>包装类 Wrapper</h2><ol>
-<li>针对八种基本数据类型相应的引用类型</li>
-<li>有了类的特点，就可以调用类的方法</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">基本数据类型</th>
-<th align="center">包装类</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">boolean</td>
-<td align="center">Boolean</td>
-</tr>
-<tr>
-<td align="center">char</td>
-<td align="center">Character</td>
-</tr>
-<tr>
-<td align="center">byte</td>
-<td align="center">Byte</td>
-</tr>
-<tr>
-<td align="center">int</td>
-<td align="center">Integer</td>
-</tr>
-<tr>
-<td align="center">long</td>
-<td align="center">Long</td>
-</tr>
-<tr>
-<td align="center">float</td>
-<td align="center">Float</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">Double</td>
-</tr>
-</tbody></table>
-<h3 id="包装类与基本数据类型的转换"><a href="#包装类与基本数据类型的转换" class="headerlink" title="包装类与基本数据类型的转换"></a>包装类与基本数据类型的转换</h3><p>装箱：基本类型-&gt;包装类</p>
-<p>拆箱：包装类-&gt;基本类型</p>
-<h4 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.warpper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Integer01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//手动装箱</span></span><br><span class="line">        <span class="comment">//jdk5前手动装箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">integer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(n);</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">integer1</span> <span class="operator">=</span> Integer.valueOf(n);</span><br><span class="line">        <span class="comment">//手动拆箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> integer.intValue();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//jdk5以后可以自动装箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n2</span> <span class="operator">=</span> <span class="number">200</span>;</span><br><span class="line">        <span class="comment">//自动装箱</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">integer2</span> <span class="operator">=</span> n2; <span class="comment">//底层使用的是 Integer.valueOf(n2)</span></span><br><span class="line">        <span class="comment">//自动拆箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n3</span> <span class="operator">=</span> integer2; <span class="comment">//底层使用的是 integer2.intValue()</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="包装类与String转换"><a href="#包装类与String转换" class="headerlink" title="包装类与String转换"></a>包装类与String转换</h3><h4 id="栗子-1"><a href="#栗子-1" class="headerlink" title="栗子"></a>栗子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.warpper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WrapperToString</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//包装类转String</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">        <span class="comment">//方式一</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> i + <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="comment">//方式二</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> i.toString();</span><br><span class="line">        <span class="comment">//方法三</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str3</span> <span class="operator">=</span> String.valueOf(i);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//String转包装类</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str4</span> <span class="operator">=</span> <span class="string">&quot;12345&quot;</span>;</span><br><span class="line">        <span class="comment">//方法一</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">i1</span> <span class="operator">=</span> Integer.parseInt(str4);</span><br><span class="line">        <span class="comment">//方法二</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(str4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="包装类的常用方法"><a href="#包装类的常用方法" class="headerlink" title="包装类的常用方法"></a>包装类的常用方法</h3><ul>
-<li>Integer.MIN_VALUE  最小值</li>
-<li>Integer.MAX_VALUE  最大值</li>
-<li>Character.isDigit(char)  判断是不是数字</li>
-<li>Character.isLetter(char)  判断是不是字母</li>
-<li>Character.isUpperCase(char)  判断是不是大写</li>
-<li>Character.isLowerCase(char)  判断是不是小写</li>
-<li>Character.isWhitespace(char)  判断是不是空格</li>
-<li>Character.toUpperCase(char)  转成大写</li>
-<li>Character.toLowerCase(char)  转成小写</li>
-</ul>
-<h2 id="String类（非常重要，建议重看）"><a href="#String类（非常重要，建议重看）" class="headerlink" title="String类（非常重要，建议重看）"></a>String类（非常重要，建议重看）</h2><p>字符串构建时，常量放入常量池中，用常量初始化会直接指向常量池，new的时候会生成堆中的对象，内容也指向常量池</p>
-<p>字符串连接：常量相加（编译器会优化），看池，变量相加，是在堆中</p>
-<p>c = a + b 底层：StringBuilder sb = new StringBuilder(); sb.append(a); sb.append(b); 返回字符串对象，在堆中</p>
-<h3 id="String常用方法"><a href="#String常用方法" class="headerlink" title="String常用方法"></a>String常用方法</h3><ul>
-<li>equals //判断内容是否相等</li>
-<li>equalsIgnoreCase //忽略大小写判断内容是否相等</li>
-<li>length //获取字符个数，字符串的长度</li>
-<li>indexOf //获取字符在字符串中第一次出现的索引，索引从零开始，如果找不到返回-1</li>
-<li>lastIndexOf //获取字符在字符串中最后一次出现的索引，索引从0开始，找不到返回-1</li>
-<li>substring //截取指定范围的字串</li>
-<li>trim //去前后空格</li>
-<li>charAt //获取某索引处的字符，不能使用Str[index]的方式</li>
-<li>toUpperCase //转大写</li>
-<li>toLowerCase //转小写</li>
-<li>concat //连接</li>
-<li>replace //替换字符串中的字符</li>
-<li>split //分割字符串</li>
-<li>conpareTo //比较字符串大小</li>
-<li>toCharArray //转换为字符数组</li>
-<li>format //格式字符串，%s字符串，%c字符，%d整型，%.2f 浮点型</li>
-</ul>
-<h2 id="StringBuffer类"><a href="#StringBuffer类" class="headerlink" title="StringBuffer类"></a>StringBuffer类</h2><p>可变长的字符序列，可以对字符串内容进行增删</p>
-<p>很多与String相同，但StringBuffer时长度可变的</p>
-<p>StringBuffer是一个容器</p>
-<ol>
-<li>StringBuffer 直接父类时 AbstractStringBuilder</li>
-<li>父类中有属性char[] 不是final类型，字符串内容存放在堆中</li>
-<li> 可串行化</li>
-<li>StringBuffer时一个final类，不能被继承</li>
-<li>StringBuffer 字符内容存在char[] value，所有变化不用每次都更换地址（即重新创建对象）</li>
-</ol>
-<h3 id="StringBuffer-与-String比较："><a href="#StringBuffer-与-String比较：" class="headerlink" title="StringBuffer 与 String比较："></a>StringBuffer 与 String比较：</h3><ol>
-<li>String保存的时字符串常量，里面的值不能更改，每次String类的更新实际上时更改地址，效率较低，private final char value[]</li>
-<li>StringBuffer保存的时字符串变量，里面的值可以更改，每次StringBuffer的更新实际上可以更新内容，不用每一次都要更新地址，效率较高，char[] value放在堆中，只有当空间大小不够的时候，会自动扩容，需要更改指向</li>
-</ol>
-<h3 id="StringBuffer构造器"><a href="#StringBuffer构造器" class="headerlink" title="StringBuffer构造器"></a>StringBuffer构造器</h3><ol>
-<li>StringBuffer()：创建容量为16的char数组，用于存放字符序列</li>
-<li>StringBuffer(int size)：指定初始容量大小</li>
-<li>StringBuffer(String string)：通过String创建StringBuffer，在String长度基础上+16，将字符串复制到空间内</li>
-</ol>
-<h3 id="String与StringBuffer相互转换"><a href="#String与StringBuffer相互转换" class="headerlink" title="String与StringBuffer相互转换"></a>String与StringBuffer相互转换</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.string_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringBuffer01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;hello tom&quot;</span>;</span><br><span class="line">        <span class="comment">//方式一，使用构造器</span></span><br><span class="line">        <span class="comment">//返回的才是StringBuffer对象，对String本身没有影响</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">stringBuffer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>(str);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式二 使用append方法</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">append</span> <span class="operator">=</span> stringBuffer.append(str);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//StringBuffer -&gt;String</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">sdfoie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>(<span class="string">&quot;sdfoie&quot;</span>);</span><br><span class="line">        <span class="comment">//方法一，直接toString</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> sdfoie.toString();</span><br><span class="line">        <span class="comment">//方法二使用构造器</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(sdfoie);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="StringBuffer常用方法"><a href="#StringBuffer常用方法" class="headerlink" title="StringBuffer常用方法"></a>StringBuffer常用方法</h3><ol>
-<li>增 append</li>
-<li>删 delete(start,end)</li>
-<li>改 replace(start,end,string)//将start - end之间的内容替换</li>
-<li>查 indexOf //查找字串第一次出现位置的索引，查不到返回-1</li>
-<li>插 insert</li>
-<li>获取长度 length</li>
-</ol>
-<h2 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h2><ol>
-<li>一个可变的字符序列，此类提供一个与StringBuffer兼容的API，但不保证同步（StringBuilder不是线程安全），该类被设计用作StringBuffer的一个建议替换，用在字符串缓冲区被单个线程使用的时候，如果可能，建议优先采用该类，因为在大多数实现中，它比StringBuffer要快</li>
-<li>StringBuilder上的主要操作是append和insert方法，可重载这些方法，以接收任意类型的数据</li>
-<li>继承AbstractStringBuilder 类，实现了Serializable接口，可串行化，是final类不能继承</li>
-<li>StringBuilder 对象字符序列仍然存放在父类AbstractStringBuilder的char[] value中，所以字符序列存放在堆中</li>
-<li>StringBuilder的方法没有做互斥处理，没有synchronized关键字，单线程情况下使用</li>
-</ol>
-<h2 id="String-与-StringBuffer-与-StringBuilder"><a href="#String-与-StringBuffer-与-StringBuilder" class="headerlink" title="String 与 StringBuffer 与 StringBuilder"></a>String 与 StringBuffer 与 StringBuilder</h2><ol>
-<li>StringBuilder与StringBuffer非常非常类似，混代表字符序列，方法也一样</li>
-<li>String，不可变字符序列，效率低但是复用率高</li>
-<li>StringBuffer可变字符序列，效率较高（增删），线程安全</li>
-<li>StringBuilder可变字符序列，效率最高，线程不安全</li>
-<li>String使用注意事项：如果对String做大量修改，不要使用String</li>
-</ol>
-<h2 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h2><ol>
-<li>abs 绝对值</li>
-<li>pow 求幂</li>
-<li>ceil 向上取整</li>
-<li>floor 向下取整</li>
-<li>round 四舍五入</li>
-<li>sqrt 求开放</li>
-<li>random 求随机数</li>
-<li>max 求两个数的最大值</li>
-<li>min 求两个数的最小值</li>
-</ol>
-<h2 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h2><p>用于管理和操作数组，排序与搜索等</p>
-<ol>
-<li><p>toString 返回数组的字符串形式</p>
-</li>
-<li><p>sort 排序 （自然排序与定制排序）</p>
-<ol>
-<li>数组是引用类型，通过sort排序后，会直接影响到实参 </li>
-<li>sort 可以通过传入一个接口实现自定义排序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Integer[] ints = &#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">5</span>&#125;;</span><br><span class="line">Arrays.sort(ints,<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Integer&gt;()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Integer o1, Integer o2)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> o1 - o2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">System.out.println(Arrays.toString(ints));</span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> Arrays.binarySearch(ints, <span class="number">5</span>);</span><br><span class="line">System.out.println(i);</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>binarySearch 通过二分搜索法进行查找，要求必须排好序，而且必须是升序</p>
-</li>
-<li><p>copyOf 数组元素复制，可指定容量，用于扩容 Integer[] newArr = Arrays.coypOf(arr,arr.length);</p>
-</li>
-<li><p>fill 数组元素填充</p>
-</li>
-<li><p>equals 比较两个数组元素内容是否完全一致</p>
-</li>
-<li><p>asList 将一组值转换为list</p>
-</li>
-</ol>
-<h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><ol>
-<li>exti 推出当前程序</li>
-<li>arraycopy：复制数组元素比较适合底层调用，一般使用Arrays.copyOf完成复制数组</li>
-<li>currentTimeMillens: 返回当前时间距离1970-1-1的毫秒数</li>
-<li>gc 运行俩及回收机制</li>
-</ol>
-<h2 id="BIgInteger和BigDecimal"><a href="#BIgInteger和BigDecimal" class="headerlink" title="BIgInteger和BigDecimal"></a>BIgInteger和BigDecimal</h2><ol>
-<li>BigInteger适合保存比较大的整型</li>
-<li>BigDecimal适合保存精度更高的浮点型（小数）</li>
-</ol>
-<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ol>
-<li>add 加</li>
-<li>subtract 减</li>
-<li>multiply 乘</li>
-<li>divide 除</li>
-</ol>
-<h2 id="日期类"><a href="#日期类" class="headerlink" title="日期类"></a>日期类</h2><h3 id="第一代日期类-Date"><a href="#第一代日期类-Date" class="headerlink" title="第一代日期类 Date"></a>第一代日期类 Date</h3><h3 id="第二代日期类-Calendar"><a href="#第二代日期类-Calendar" class="headerlink" title="第二代日期类 Calendar"></a>第二代日期类 Calendar</h3><h3 id="第三代日期类-LocateDate，LocalTime，LocalDateTime，DateTimeFormatter"><a href="#第三代日期类-LocateDate，LocalTime，LocalDateTime，DateTimeFormatter" class="headerlink" title="第三代日期类 LocateDate，LocalTime，LocalDateTime，DateTimeFormatter"></a>第三代日期类 LocateDate，LocalTime，LocalDateTime，DateTimeFormatter</h3>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>异常</title>
-    <url>/lyx104646.github.io.git/2019/04/16/%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>执行中发生的异常事件：</p>
-<ol>
-<li>Error（错误） Java虚拟机无法解决的严重问题，比如JVM内部错误，资源耗尽等严重错误，程序会崩溃</li>
-<li>Exception（异常）因变成错误或偶然外在因素导致的一般性问题，可以使用针对性的代码进行处理。Exception分为两大类：运行时异常（程序运行时发生的异常） 编译时异常（编程时，编译器检查出的异常）</li>
-</ol>
-<h2 id="异常体系图"><a href="#异常体系图" class="headerlink" title="异常体系图"></a>异常体系图</h2><p><img src=".%5Cassets%5Cimage-20220316213222590.png" alt="image-20220316213222590"></p>
-<h2 id="异常类别"><a href="#异常类别" class="headerlink" title="异常类别"></a>异常类别</h2><ol>
-<li>运行时异常，编译器检查不出来，一般是变成时的逻辑错误，对于运行时异常，可以不做处理</li>
-<li>编译时异常，编译器要求必须处置的异常</li>
-</ol>
-<h2 id="常见运行时异常"><a href="#常见运行时异常" class="headerlink" title="常见运行时异常"></a>常见运行时异常</h2><ol>
-<li>NullPointerException：空指针异常</li>
-<li>ArithmeticException：数学运算异常</li>
-<li>ArrayIndexOutOfBoundsException：数组下标越界异常</li>
-<li>ClassCastException：类型转换异常</li>
-<li>NumberFormatException：数字格式不正确异常，将字符串转换为目标类型时会抛出</li>
-</ol>
-<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><ol>
-<li><p>try-catch-finally :代码块中捕获异常，程序员自己处理</p>
-<ol>
-<li><p>try代码块可以有多个异常，可以用多个catch分别捕获，子类异常写在前面，父类异常写在后面</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.trycatch_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TryCatch01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入一个整数&quot;</span>);</span><br><span class="line">            <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">            <span class="type">String</span> <span class="variable">next</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                n = Integer.parseInt(next);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;输入的不是整数&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入的整数为:&quot;</span> + n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>throws：在方法中将发生的异常抛出，交给方法的调用者处理，最顶级的处理者就是JVM</p>
-<ol>
-<li>子类重写父类的方法，抛出异常不能扩大异常范围</li>
-<li>java中并不要求程序员显式处理运行异常，因为有默认处理机制，默认抛出，throws抛出运行异常在方法外可以不处理</li>
-</ol>
-</li>
-</ol>
-<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><ol>
-<li>定义类：自定义异常名，继承Exception 或 RuntimeException</li>
-<li>如果继承Exception，属于编译异常</li>
-<li>如果继承RuntimeExcepton 属于运行异常（一般使用运行时异常）</li>
-<li>使用throw关键字抛出异常</li>
-</ol>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.exception_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomeException01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">8</span>;</span><br><span class="line">        <span class="keyword">if</span>(!(age &gt;=<span class="number">18</span> &amp;&amp; age &lt;=<span class="number">120</span>))&#123;</span><br><span class="line">            <span class="comment">//可以通过构造器设置信息</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">AgeException</span>(<span class="string">&quot;年龄需要在 18~120 之间&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;年龄正确&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//自定义异常</span></span><br><span class="line"><span class="comment">//一般情况下，自定义异常继承RuntimeException</span></span><br><span class="line"><span class="comment">//好处是可以使用默认的异常处理机制</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AgeException</span> <span class="keyword">extends</span> <span class="title class_">RuntimeException</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">AgeException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="throw-与-throws"><a href="#throw-与-throws" class="headerlink" title="throw 与 throws"></a>throw 与 throws</h2><p>throws：在方法声明处，表示抛出的异常的类型</p>
-<p>throw：在方法体内，用于手动抛出异常对象</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>java面向对象</title>
-    <url>/lyx104646.github.io.git/2019/05/15/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <url>/2019/05/15/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="Java面向对象笔记"><a href="#Java面向对象笔记" class="headerlink" title="Java面向对象笔记"></a>Java面向对象笔记</h1><h2 id="构造方法-构造器constructor"><a href="#构造方法-构造器constructor" class="headerlink" title="构造方法/构造器constructor"></a>构造方法/构造器constructor</h2><ul>
 <li>构造方法名和类名相同</li>
 <li>完成对对象的初始化，系统自动调用，并不是创建对象，创建对象时系统会自动调用构造方法</li>
@@ -617,8 +342,39 @@
       </categories>
   </entry>
   <entry>
+    <title>Java基础</title>
+    <url>/2019/04/10/Java%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="Java转义符"><a href="#Java转义符" class="headerlink" title="Java转义符"></a>Java转义符</h2><ul>
+<li>/n 换行</li>
+<li>/t 制表符</li>
+<li>\\ 一个斜杠</li>
+<li>\&#39;  一个 ‘</li>
+<li>\&quot; 一个 “</li>
+<li>\r 回车符</li>
+</ul>
+<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><p>两个字节，与Unicode码对应</p>
+<h2 id="java输入"><a href="#java输入" class="headerlink" title="java输入"></a>java输入</h2><p>使用扫描器 java.util.Scanner</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="comment">//简单的文本扫描器</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Input</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String args[])</span>&#123;</span><br><span class="line">		<span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">		<span class="comment">//接受用户输入</span></span><br><span class="line">		System.out.println(<span class="string">&quot;请输入用户名字&quot;</span>);</span><br><span class="line">		<span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">		<span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line">		<span class="type">double</span> <span class="variable">salary</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line">		System.out.println(<span class="string">&quot;名字：&quot;</span> + name + <span class="string">&quot;,薪水：&quot;</span> + salary + <span class="string">&quot;,年龄：&quot;</span> + age);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>数据类型… 变量</p>
+<ul>
+<li>代表零个或多个参数，本质是数组</li>
+<li>可变参数的实参可以是数组</li>
+<li>可变参数可以和其他参数一起放到形参列表，但只能在形参列表的最后</li>
+<li>一个形参列表中只能有一个可变参数</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">VarParameter</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">		<span class="type">int</span> a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>,d=<span class="number">4</span>;</span><br><span class="line">		<span class="type">VarParameter</span> <span class="variable">varParameter</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">VarParameter</span>();</span><br><span class="line">		System.out.println(varParameter.sum(a,b,c,d));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span>... nums)</span>&#123;</span><br><span class="line">		<span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;++i)&#123;</span><br><span class="line">			res+=nums[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>泛型</title>
-    <url>/lyx104646.github.io.git/2022/07/15/%E6%B3%9B%E5%9E%8B/</url>
+    <url>/2022/07/15/%E6%B3%9B%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="泛型（generic）"><a href="#泛型（generic）" class="headerlink" title="泛型（generic）"></a>泛型（generic）</h1><h2 id="传统方法的问题"><a href="#传统方法的问题" class="headerlink" title="传统方法的问题"></a>传统方法的问题</h2><ol>
 <li>不能对加入到集合ArrayList中的数据类型进行约束（不安全）</li>
 <li>遍历的时候，需要进行类型的转换，如果集合中的数据量较大，对效率有影响</li>
@@ -689,7 +445,7 @@
   </entry>
   <entry>
     <title>注解</title>
-    <url>/lyx104646.github.io.git/2019/04/19/%E6%B3%A8%E8%A7%A3/</url>
+    <url>/2019/04/19/%E6%B3%A8%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="注解（Annotation）"><a href="#注解（Annotation）" class="headerlink" title="注解（Annotation）"></a>注解（Annotation）</h1><p> 注解不影响程序的功能，但注解可以被编译或运行</p>
 <ol>
 <li>@Override 限定某个方法，重写父类方法</li>
@@ -708,44 +464,252 @@
       </categories>
   </entry>
   <entry>
-    <title>设计模式</title>
-    <url>/lyx104646.github.io.git/2022/07/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h2><p>单例模式，就是采取一定的方法保证在整个软件系统中，对某个类只能存在一个对象示例，而且该类只提供一个取得器对象示例的方法</p>
-<p>有两种方式，1.饿汉式，2. 懒汉式</p>
-<p>具体步骤</p>
+    <title>Hello World</title>
+    <url>/2022/07/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>异常</title>
+    <url>/2019/04/16/%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>执行中发生的异常事件：</p>
 <ol>
-<li>构造器私有化，防止直接new</li>
-<li>类的内部创建对象</li>
-<li>向外暴露一个静态的公共方法getInstance</li>
+<li>Error（错误） Java虚拟机无法解决的严重问题，比如JVM内部错误，资源耗尽等严重错误，程序会崩溃</li>
+<li>Exception（异常）因变成错误或偶然外在因素导致的一般性问题，可以使用针对性的代码进行处理。Exception分为两大类：运行时异常（程序运行时发生的异常） 编译时异常（编程时，编译器检查出的异常）</li>
 </ol>
-<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>类一旦加载就会创建，有可能用不到就创建了对象</p>
-<p>通常是重量级的对象，会造成资源的浪费</p>
-<p>不存在线程安全问题</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//有一个类GirlFriend,饿汉式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GirlFriend</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">GirlFriend</span> <span class="variable">gf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GirlFriend</span>(<span class="string">&quot;abaaba&quot;</span>);</span><br><span class="line">    <span class="comment">//构造器私有化</span></span><br><span class="line">    <span class="comment">//在类的内部直接创建</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">GirlFriend</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> GirlFriend <span class="title function_">getInstance</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gf;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;GirlFriend&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="异常体系图"><a href="#异常体系图" class="headerlink" title="异常体系图"></a>异常体系图</h2><p><img src=".%5Cassets%5Cimage-20220316213222590.png" alt="image-20220316213222590"></p>
+<h2 id="异常类别"><a href="#异常类别" class="headerlink" title="异常类别"></a>异常类别</h2><ol>
+<li>运行时异常，编译器检查不出来，一般是变成时的逻辑错误，对于运行时异常，可以不做处理</li>
+<li>编译时异常，编译器要求必须处置的异常</li>
+</ol>
+<h2 id="常见运行时异常"><a href="#常见运行时异常" class="headerlink" title="常见运行时异常"></a>常见运行时异常</h2><ol>
+<li>NullPointerException：空指针异常</li>
+<li>ArithmeticException：数学运算异常</li>
+<li>ArrayIndexOutOfBoundsException：数组下标越界异常</li>
+<li>ClassCastException：类型转换异常</li>
+<li>NumberFormatException：数字格式不正确异常，将字符串转换为目标类型时会抛出</li>
+</ol>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><ol>
+<li><p>try-catch-finally :代码块中捕获异常，程序员自己处理</p>
+<ol>
+<li><p>try代码块可以有多个异常，可以用多个catch分别捕获，子类异常写在前面，父类异常写在后面</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.trycatch_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TryCatch01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入一个整数&quot;</span>);</span><br><span class="line">            <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">            <span class="type">String</span> <span class="variable">next</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                n = Integer.parseInt(next);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;输入的不是整数&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入的整数为:&quot;</span> + n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>throws：在方法中将发生的异常抛出，交给方法的调用者处理，最顶级的处理者就是JVM</p>
+<ol>
+<li>子类重写父类的方法，抛出异常不能扩大异常范围</li>
+<li>java中并不要求程序员显式处理运行异常，因为有默认处理机制，默认抛出，throws抛出运行异常在方法外可以不处理</li>
+</ol>
+</li>
+</ol>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><ol>
+<li>定义类：自定义异常名，继承Exception 或 RuntimeException</li>
+<li>如果继承Exception，属于编译异常</li>
+<li>如果继承RuntimeExcepton 属于运行异常（一般使用运行时异常）</li>
+<li>使用throw关键字抛出异常</li>
+</ol>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.exception_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomeException01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">8</span>;</span><br><span class="line">        <span class="keyword">if</span>(!(age &gt;=<span class="number">18</span> &amp;&amp; age &lt;=<span class="number">120</span>))&#123;</span><br><span class="line">            <span class="comment">//可以通过构造器设置信息</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">AgeException</span>(<span class="string">&quot;年龄需要在 18~120 之间&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;年龄正确&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//自定义异常</span></span><br><span class="line"><span class="comment">//一般情况下，自定义异常继承RuntimeException</span></span><br><span class="line"><span class="comment">//好处是可以使用默认的异常处理机制</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AgeException</span> <span class="keyword">extends</span> <span class="title class_">RuntimeException</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">AgeException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><p>不去用就不会创建</p>
-<p>存在线程安全问题</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单例模式，懒汉式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BoyFriend</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> BoyFriend boyFriend;</span><br><span class="line">    <span class="comment">//构造器私有化</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">BoyFriend</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//公共的方法返回对象</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> BoyFriend <span class="title function_">getInstance</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(boyFriend == <span class="literal">null</span>)&#123;</span><br><span class="line">            boyFriend = <span class="keyword">new</span> <span class="title class_">BoyFriend</span>(<span class="string">&quot;biliblil&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> boyFriend;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;BoyFriend&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="模板设计模式"><a href="#模板设计模式" class="headerlink" title="模板设计模式"></a>模板设计模式</h2><p>使用抽象类定义类的模板</p>
-<p>举例：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.poly.abstract_.template_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TemplateTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">JobA</span> <span class="variable">jobA</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JobA</span>();</span><br><span class="line">        <span class="type">JobB</span> <span class="variable">jobB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JobB</span>();</span><br><span class="line">        jobA.calTime();</span><br><span class="line">        jobB.calTime();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">JobTemplate</span>&#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">job</span><span class="params">()</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">calTime</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="variable">start</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">        job();</span><br><span class="line">        <span class="type">long</span> <span class="variable">end</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">        <span class="type">long</span> <span class="variable">time</span> <span class="operator">=</span> end - start;</span><br><span class="line">        System.out.println(<span class="string">&quot;执行时间：&quot;</span> + time + <span class="string">&quot;毫秒&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JobA</span> <span class="keyword">extends</span> <span class="title class_">JobTemplate</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">job</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//a的执行逻辑</span></span><br><span class="line">        <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">            num*=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JobB</span> <span class="keyword">extends</span> <span class="title class_">JobTemplate</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">job</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//b的执行逻辑</span></span><br><span class="line">        <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">            num&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>以实现Runnable接口举例：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.thread_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Thread02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">        <span class="comment">//这里不能直接使用start方法</span></span><br><span class="line">        <span class="comment">//通过Thread对象，实现开启线程，使用了代理模式</span></span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(dog);</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//代理类，模拟一个极简的Thread类，只要有类实现Runnable，就能进行代理</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Proxy</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">Runnable</span> <span class="variable">target</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(target != <span class="literal">null</span>)&#123;</span><br><span class="line">            target.run();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Proxy</span><span class="params">(Runnable target)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">start</span><span class="params">()</span>&#123;</span><br><span class="line">        start0();<span class="comment">//这个方法是真正实现多线程的方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">start0</span><span class="params">()</span>&#123;</span><br><span class="line">        run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过Runnalbe接口实现线程</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;小狗汪汪叫&quot;</span> + (++count));</span><br><span class="line">            System.out.println(Thread.currentThread());</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(count == <span class="number">10</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h2 id="throw-与-throws"><a href="#throw-与-throws" class="headerlink" title="throw 与 throws"></a>throw 与 throws</h2><p>throws：在方法声明处，表示抛出的异常的类型</p>
+<p>throw：在方法体内，用于手动抛出异常对象</p>
 ]]></content>
       <categories>
         <category>Java</category>
       </categories>
   </entry>
   <entry>
+    <title>常用类</title>
+    <url>/2022/07/29/%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
+    <content><![CDATA[<h1 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h1><h2 id="包装类-Wrapper"><a href="#包装类-Wrapper" class="headerlink" title="包装类 Wrapper"></a>包装类 Wrapper</h2><ol>
+<li>针对八种基本数据类型相应的引用类型</li>
+<li>有了类的特点，就可以调用类的方法</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">基本数据类型</th>
+<th align="center">包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">boolean</td>
+<td align="center">Boolean</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">Character</td>
+</tr>
+<tr>
+<td align="center">byte</td>
+<td align="center">Byte</td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">Integer</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">Long</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">Float</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">Double</td>
+</tr>
+</tbody></table>
+<h3 id="包装类与基本数据类型的转换"><a href="#包装类与基本数据类型的转换" class="headerlink" title="包装类与基本数据类型的转换"></a>包装类与基本数据类型的转换</h3><p>装箱：基本类型-&gt;包装类</p>
+<p>拆箱：包装类-&gt;基本类型</p>
+<h4 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.warpper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Integer01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//手动装箱</span></span><br><span class="line">        <span class="comment">//jdk5前手动装箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">integer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(n);</span><br><span class="line">        <span class="type">Integer</span> <span class="variable">integer1</span> <span class="operator">=</span> Integer.valueOf(n);</span><br><span class="line">        <span class="comment">//手动拆箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> integer.intValue();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//jdk5以后可以自动装箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n2</span> <span class="operator">=</span> <span class="number">200</span>;</span><br><span class="line">        <span class="comment">//自动装箱</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">integer2</span> <span class="operator">=</span> n2; <span class="comment">//底层使用的是 Integer.valueOf(n2)</span></span><br><span class="line">        <span class="comment">//自动拆箱</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">n3</span> <span class="operator">=</span> integer2; <span class="comment">//底层使用的是 integer2.intValue()</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="包装类与String转换"><a href="#包装类与String转换" class="headerlink" title="包装类与String转换"></a>包装类与String转换</h3><h4 id="栗子-1"><a href="#栗子-1" class="headerlink" title="栗子"></a>栗子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.warpper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WrapperToString</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//包装类转String</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">        <span class="comment">//方式一</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> i + <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="comment">//方式二</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> i.toString();</span><br><span class="line">        <span class="comment">//方法三</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str3</span> <span class="operator">=</span> String.valueOf(i);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//String转包装类</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">str4</span> <span class="operator">=</span> <span class="string">&quot;12345&quot;</span>;</span><br><span class="line">        <span class="comment">//方法一</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">i1</span> <span class="operator">=</span> Integer.parseInt(str4);</span><br><span class="line">        <span class="comment">//方法二</span></span><br><span class="line">        <span class="type">Integer</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(str4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="包装类的常用方法"><a href="#包装类的常用方法" class="headerlink" title="包装类的常用方法"></a>包装类的常用方法</h3><ul>
+<li>Integer.MIN_VALUE  最小值</li>
+<li>Integer.MAX_VALUE  最大值</li>
+<li>Character.isDigit(char)  判断是不是数字</li>
+<li>Character.isLetter(char)  判断是不是字母</li>
+<li>Character.isUpperCase(char)  判断是不是大写</li>
+<li>Character.isLowerCase(char)  判断是不是小写</li>
+<li>Character.isWhitespace(char)  判断是不是空格</li>
+<li>Character.toUpperCase(char)  转成大写</li>
+<li>Character.toLowerCase(char)  转成小写</li>
+</ul>
+<h2 id="String类（非常重要，建议重看）"><a href="#String类（非常重要，建议重看）" class="headerlink" title="String类（非常重要，建议重看）"></a>String类（非常重要，建议重看）</h2><p>字符串构建时，常量放入常量池中，用常量初始化会直接指向常量池，new的时候会生成堆中的对象，内容也指向常量池</p>
+<p>字符串连接：常量相加（编译器会优化），看池，变量相加，是在堆中</p>
+<p>c = a + b 底层：StringBuilder sb = new StringBuilder(); sb.append(a); sb.append(b); 返回字符串对象，在堆中</p>
+<h3 id="String常用方法"><a href="#String常用方法" class="headerlink" title="String常用方法"></a>String常用方法</h3><ul>
+<li>equals //判断内容是否相等</li>
+<li>equalsIgnoreCase //忽略大小写判断内容是否相等</li>
+<li>length //获取字符个数，字符串的长度</li>
+<li>indexOf //获取字符在字符串中第一次出现的索引，索引从零开始，如果找不到返回-1</li>
+<li>lastIndexOf //获取字符在字符串中最后一次出现的索引，索引从0开始，找不到返回-1</li>
+<li>substring //截取指定范围的字串</li>
+<li>trim //去前后空格</li>
+<li>charAt //获取某索引处的字符，不能使用Str[index]的方式</li>
+<li>toUpperCase //转大写</li>
+<li>toLowerCase //转小写</li>
+<li>concat //连接</li>
+<li>replace //替换字符串中的字符</li>
+<li>split //分割字符串</li>
+<li>conpareTo //比较字符串大小</li>
+<li>toCharArray //转换为字符数组</li>
+<li>format //格式字符串，%s字符串，%c字符，%d整型，%.2f 浮点型</li>
+</ul>
+<h2 id="StringBuffer类"><a href="#StringBuffer类" class="headerlink" title="StringBuffer类"></a>StringBuffer类</h2><p>可变长的字符序列，可以对字符串内容进行增删</p>
+<p>很多与String相同，但StringBuffer时长度可变的</p>
+<p>StringBuffer是一个容器</p>
+<ol>
+<li>StringBuffer 直接父类时 AbstractStringBuilder</li>
+<li>父类中有属性char[] 不是final类型，字符串内容存放在堆中</li>
+<li> 可串行化</li>
+<li>StringBuffer时一个final类，不能被继承</li>
+<li>StringBuffer 字符内容存在char[] value，所有变化不用每次都更换地址（即重新创建对象）</li>
+</ol>
+<h3 id="StringBuffer-与-String比较："><a href="#StringBuffer-与-String比较：" class="headerlink" title="StringBuffer 与 String比较："></a>StringBuffer 与 String比较：</h3><ol>
+<li>String保存的时字符串常量，里面的值不能更改，每次String类的更新实际上时更改地址，效率较低，private final char value[]</li>
+<li>StringBuffer保存的时字符串变量，里面的值可以更改，每次StringBuffer的更新实际上可以更新内容，不用每一次都要更新地址，效率较高，char[] value放在堆中，只有当空间大小不够的时候，会自动扩容，需要更改指向</li>
+</ol>
+<h3 id="StringBuffer构造器"><a href="#StringBuffer构造器" class="headerlink" title="StringBuffer构造器"></a>StringBuffer构造器</h3><ol>
+<li>StringBuffer()：创建容量为16的char数组，用于存放字符序列</li>
+<li>StringBuffer(int size)：指定初始容量大小</li>
+<li>StringBuffer(String string)：通过String创建StringBuffer，在String长度基础上+16，将字符串复制到空间内</li>
+</ol>
+<h3 id="String与StringBuffer相互转换"><a href="#String与StringBuffer相互转换" class="headerlink" title="String与StringBuffer相互转换"></a>String与StringBuffer相互转换</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.string_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringBuffer01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;hello tom&quot;</span>;</span><br><span class="line">        <span class="comment">//方式一，使用构造器</span></span><br><span class="line">        <span class="comment">//返回的才是StringBuffer对象，对String本身没有影响</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">stringBuffer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>(str);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式二 使用append方法</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">append</span> <span class="operator">=</span> stringBuffer.append(str);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//StringBuffer -&gt;String</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">sdfoie</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>(<span class="string">&quot;sdfoie&quot;</span>);</span><br><span class="line">        <span class="comment">//方法一，直接toString</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> sdfoie.toString();</span><br><span class="line">        <span class="comment">//方法二使用构造器</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(sdfoie);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="StringBuffer常用方法"><a href="#StringBuffer常用方法" class="headerlink" title="StringBuffer常用方法"></a>StringBuffer常用方法</h3><ol>
+<li>增 append</li>
+<li>删 delete(start,end)</li>
+<li>改 replace(start,end,string)//将start - end之间的内容替换</li>
+<li>查 indexOf //查找字串第一次出现位置的索引，查不到返回-1</li>
+<li>插 insert</li>
+<li>获取长度 length</li>
+</ol>
+<h2 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h2><ol>
+<li>一个可变的字符序列，此类提供一个与StringBuffer兼容的API，但不保证同步（StringBuilder不是线程安全），该类被设计用作StringBuffer的一个建议替换，用在字符串缓冲区被单个线程使用的时候，如果可能，建议优先采用该类，因为在大多数实现中，它比StringBuffer要快</li>
+<li>StringBuilder上的主要操作是append和insert方法，可重载这些方法，以接收任意类型的数据</li>
+<li>继承AbstractStringBuilder 类，实现了Serializable接口，可串行化，是final类不能继承</li>
+<li>StringBuilder 对象字符序列仍然存放在父类AbstractStringBuilder的char[] value中，所以字符序列存放在堆中</li>
+<li>StringBuilder的方法没有做互斥处理，没有synchronized关键字，单线程情况下使用</li>
+</ol>
+<h2 id="String-与-StringBuffer-与-StringBuilder"><a href="#String-与-StringBuffer-与-StringBuilder" class="headerlink" title="String 与 StringBuffer 与 StringBuilder"></a>String 与 StringBuffer 与 StringBuilder</h2><ol>
+<li>StringBuilder与StringBuffer非常非常类似，混代表字符序列，方法也一样</li>
+<li>String，不可变字符序列，效率低但是复用率高</li>
+<li>StringBuffer可变字符序列，效率较高（增删），线程安全</li>
+<li>StringBuilder可变字符序列，效率最高，线程不安全</li>
+<li>String使用注意事项：如果对String做大量修改，不要使用String</li>
+</ol>
+<h2 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h2><ol>
+<li>abs 绝对值</li>
+<li>pow 求幂</li>
+<li>ceil 向上取整</li>
+<li>floor 向下取整</li>
+<li>round 四舍五入</li>
+<li>sqrt 求开放</li>
+<li>random 求随机数</li>
+<li>max 求两个数的最大值</li>
+<li>min 求两个数的最小值</li>
+</ol>
+<h2 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h2><p>用于管理和操作数组，排序与搜索等</p>
+<ol>
+<li><p>toString 返回数组的字符串形式</p>
+</li>
+<li><p>sort 排序 （自然排序与定制排序）</p>
+<ol>
+<li>数组是引用类型，通过sort排序后，会直接影响到实参 </li>
+<li>sort 可以通过传入一个接口实现自定义排序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Integer[] ints = &#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">5</span>&#125;;</span><br><span class="line">Arrays.sort(ints,<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Integer&gt;()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Integer o1, Integer o2)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> o1 - o2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">System.out.println(Arrays.toString(ints));</span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> Arrays.binarySearch(ints, <span class="number">5</span>);</span><br><span class="line">System.out.println(i);</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>binarySearch 通过二分搜索法进行查找，要求必须排好序，而且必须是升序</p>
+</li>
+<li><p>copyOf 数组元素复制，可指定容量，用于扩容 Integer[] newArr = Arrays.coypOf(arr,arr.length);</p>
+</li>
+<li><p>fill 数组元素填充</p>
+</li>
+<li><p>equals 比较两个数组元素内容是否完全一致</p>
+</li>
+<li><p>asList 将一组值转换为list</p>
+</li>
+</ol>
+<h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><ol>
+<li>exti 推出当前程序</li>
+<li>arraycopy：复制数组元素比较适合底层调用，一般使用Arrays.copyOf完成复制数组</li>
+<li>currentTimeMillens: 返回当前时间距离1970-1-1的毫秒数</li>
+<li>gc 运行俩及回收机制</li>
+</ol>
+<h2 id="BIgInteger和BigDecimal"><a href="#BIgInteger和BigDecimal" class="headerlink" title="BIgInteger和BigDecimal"></a>BIgInteger和BigDecimal</h2><ol>
+<li>BigInteger适合保存比较大的整型</li>
+<li>BigDecimal适合保存精度更高的浮点型（小数）</li>
+</ol>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ol>
+<li>add 加</li>
+<li>subtract 减</li>
+<li>multiply 乘</li>
+<li>divide 除</li>
+</ol>
+<h2 id="日期类"><a href="#日期类" class="headerlink" title="日期类"></a>日期类</h2><h3 id="第一代日期类-Date"><a href="#第一代日期类-Date" class="headerlink" title="第一代日期类 Date"></a>第一代日期类 Date</h3><h3 id="第二代日期类-Calendar"><a href="#第二代日期类-Calendar" class="headerlink" title="第二代日期类 Calendar"></a>第二代日期类 Calendar</h3><h3 id="第三代日期类-LocateDate，LocalTime，LocalDateTime，DateTimeFormatter"><a href="#第三代日期类-LocateDate，LocalTime，LocalDateTime，DateTimeFormatter" class="headerlink" title="第三代日期类 LocateDate，LocalTime，LocalDateTime，DateTimeFormatter"></a>第三代日期类 LocateDate，LocalTime，LocalDateTime，DateTimeFormatter</h3>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>进程与线程</title>
-    <url>/lyx104646.github.io.git/2019/04/18/%E7%BA%BF%E7%A8%8B/</url>
+    <url>/2019/04/18/%E7%BA%BF%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h1><h2 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h2><p>是为完成特定任务，用某种语言编写的一组指令的集合，简单的说，就是我们写的代码</p>
 <h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><ol>
 <li>进程是指运行中的程序，操作系统会为进程分配内存空间</li>
@@ -849,8 +813,44 @@
       </categories>
   </entry>
   <entry>
+    <title>设计模式</title>
+    <url>/2022/07/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h2><p>单例模式，就是采取一定的方法保证在整个软件系统中，对某个类只能存在一个对象示例，而且该类只提供一个取得器对象示例的方法</p>
+<p>有两种方式，1.饿汉式，2. 懒汉式</p>
+<p>具体步骤</p>
+<ol>
+<li>构造器私有化，防止直接new</li>
+<li>类的内部创建对象</li>
+<li>向外暴露一个静态的公共方法getInstance</li>
+</ol>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>类一旦加载就会创建，有可能用不到就创建了对象</p>
+<p>通常是重量级的对象，会造成资源的浪费</p>
+<p>不存在线程安全问题</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//有一个类GirlFriend,饿汉式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GirlFriend</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">GirlFriend</span> <span class="variable">gf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GirlFriend</span>(<span class="string">&quot;abaaba&quot;</span>);</span><br><span class="line">    <span class="comment">//构造器私有化</span></span><br><span class="line">    <span class="comment">//在类的内部直接创建</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">GirlFriend</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> GirlFriend <span class="title function_">getInstance</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> gf;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;GirlFriend&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><p>不去用就不会创建</p>
+<p>存在线程安全问题</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单例模式，懒汉式</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BoyFriend</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> BoyFriend boyFriend;</span><br><span class="line">    <span class="comment">//构造器私有化</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">BoyFriend</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//公共的方法返回对象</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> BoyFriend <span class="title function_">getInstance</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(boyFriend == <span class="literal">null</span>)&#123;</span><br><span class="line">            boyFriend = <span class="keyword">new</span> <span class="title class_">BoyFriend</span>(<span class="string">&quot;biliblil&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> boyFriend;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;BoyFriend&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="模板设计模式"><a href="#模板设计模式" class="headerlink" title="模板设计模式"></a>模板设计模式</h2><p>使用抽象类定义类的模板</p>
+<p>举例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.poly.abstract_.template_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TemplateTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">JobA</span> <span class="variable">jobA</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JobA</span>();</span><br><span class="line">        <span class="type">JobB</span> <span class="variable">jobB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JobB</span>();</span><br><span class="line">        jobA.calTime();</span><br><span class="line">        jobB.calTime();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">JobTemplate</span>&#123;</span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">job</span><span class="params">()</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">calTime</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">long</span> <span class="variable">start</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">        job();</span><br><span class="line">        <span class="type">long</span> <span class="variable">end</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">        <span class="type">long</span> <span class="variable">time</span> <span class="operator">=</span> end - start;</span><br><span class="line">        System.out.println(<span class="string">&quot;执行时间：&quot;</span> + time + <span class="string">&quot;毫秒&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JobA</span> <span class="keyword">extends</span> <span class="title class_">JobTemplate</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">job</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//a的执行逻辑</span></span><br><span class="line">        <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">            num*=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">JobB</span> <span class="keyword">extends</span> <span class="title class_">JobTemplate</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">job</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//b的执行逻辑</span></span><br><span class="line">        <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">            num&lt;&lt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>以实现Runnable接口举例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.thread_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Thread02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Dog</span> <span class="variable">dog</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">        <span class="comment">//这里不能直接使用start方法</span></span><br><span class="line">        <span class="comment">//通过Thread对象，实现开启线程，使用了代理模式</span></span><br><span class="line">        <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(dog);</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//代理类，模拟一个极简的Thread类，只要有类实现Runnable，就能进行代理</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Proxy</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">Runnable</span> <span class="variable">target</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(target != <span class="literal">null</span>)&#123;</span><br><span class="line">            target.run();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Proxy</span><span class="params">(Runnable target)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">start</span><span class="params">()</span>&#123;</span><br><span class="line">        start0();<span class="comment">//这个方法是真正实现多线程的方法</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">start0</span><span class="params">()</span>&#123;</span><br><span class="line">        run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过Runnalbe接口实现线程</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;小狗汪汪叫&quot;</span> + (++count));</span><br><span class="line">            System.out.println(Thread.currentThread());</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(count == <span class="number">10</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>集合</title>
-    <url>/lyx104646.github.io.git/2022/07/28/%E9%9B%86%E5%90%88/</url>
+    <url>/2022/07/28/%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><ol>
 <li>可以动态保存任意多个对象，使用比较方便</li>
 <li>提供了一系列方便的操作方法：add，remove，set，get</li>
