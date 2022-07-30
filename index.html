@@ -1086,6 +1086,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lyx104646.github.io/2019/09/18/%E5%85%B3%E4%BA%8ESpringboot%E7%94%A8%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://images4.alphacoders.com/227/227918.jpg">
+      <meta itemprop="name" content="库李">
+      <meta itemprop="description" content="尼好">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="库李的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/18/%E5%85%B3%E4%BA%8ESpringboot%E7%94%A8%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E8%A7%A3/" class="post-title-link" itemprop="url">关于Springboot用到的一些注解</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-18 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-18T00:00:00+08:00">2019-09-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-30 16:02:00" itemprop="dateModified" datetime="2022-07-30T16:02:00+08:00">2022-07-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="SpingBoot的一些注解"><a href="#SpingBoot的一些注解" class="headerlink" title="SpingBoot的一些注解"></a>SpingBoot的一些注解</h1><h2 id="RestController"><a href="#RestController" class="headerlink" title="@RestController"></a>@RestController</h2><p>相当于@Contorller+@RequestBody</p>
+<h3 id="WebFilter"><a href="#WebFilter" class="headerlink" title="@WebFilter"></a>@WebFilter</h3><p>@WebFilter 用于将一个类声明为过滤器，该注解将会在部署时被容器处理，容器将根据具体的属性配置将相应的类部署为过滤器。该注解具有下表给出的一些常用属性 ( 以下所有属性均为可选属性，但是 <strong>value</strong>、<strong>urlPatterns</strong>、<strong>servletNames</strong> 三者必需至少包含一个，且 value 和 urlPatterns 不能共存，如果同时指定，通常忽略 value 的取值 )：</p>
+<h3 id="Filter接口中有三个重要的方法。"><a href="#Filter接口中有三个重要的方法。" class="headerlink" title="Filter接口中有三个重要的方法。"></a>Filter接口中有三个重要的方法。</h3><p><strong>init()方法</strong>：初始化参数，在创建Filter时自动调用。当我们需要设置初始化参数的时候，可以写到该方法中。<br><strong>doFilter()方法</strong>：拦截到要执行的请求时，doFilter就会执行。这里面写我们对请求和响应的预处理。<br><strong>destroy()方法</strong>：在销毁Filter时自动调用。</p>
+<h4 id="Filter的生命周期-Filter的创建和销毁由web服务器控制。"><a href="#Filter的生命周期-Filter的创建和销毁由web服务器控制。" class="headerlink" title="Filter的生命周期 Filter的创建和销毁由web服务器控制。"></a>Filter的生命周期 Filter的创建和销毁由web服务器控制。</h4><ul>
+<li>服务器启动的时候，web服务器创建Filter的实例对象，并调用其init方法，完成对象的</li>
+<li>初始化功能。filter对象只会创建一次，init方法也只会执行一次。</li>
+<li>拦截到请求时，执行doFilter方法。可以执行多次。</li>
+<li>服务器关闭时，web服务器销毁Filter的实例对象。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://lyx104646.github.io/2019/05/15/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1589,7 +1671,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-29 17:22:40" itemprop="dateModified" datetime="2022-07-29T17:22:40+08:00">2022-07-29</time>
+                <time title="修改时间：2022-07-30 10:26:27" itemprop="dateModified" datetime="2022-07-30T10:26:27+08:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1724,120 +1806,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lyx104646.github.io/2019/04/16/%E5%BC%82%E5%B8%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://images4.alphacoders.com/227/227918.jpg">
-      <meta itemprop="name" content="库李">
-      <meta itemprop="description" content="尼好">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="库李的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/04/16/%E5%BC%82%E5%B8%B8/" class="post-title-link" itemprop="url">异常</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-04-16 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-16T00:00:00+08:00">2019-04-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-29 17:22:46" itemprop="dateModified" datetime="2022-07-29T17:22:46+08:00">2022-07-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>执行中发生的异常事件：</p>
-<ol>
-<li>Error（错误） Java虚拟机无法解决的严重问题，比如JVM内部错误，资源耗尽等严重错误，程序会崩溃</li>
-<li>Exception（异常）因变成错误或偶然外在因素导致的一般性问题，可以使用针对性的代码进行处理。Exception分为两大类：运行时异常（程序运行时发生的异常） 编译时异常（编程时，编译器检查出的异常）</li>
-</ol>
-<h2 id="异常体系图"><a href="#异常体系图" class="headerlink" title="异常体系图"></a>异常体系图</h2><p><img src=".%5Cassets%5Cimage-20220316213222590.png" alt="image-20220316213222590"></p>
-<h2 id="异常类别"><a href="#异常类别" class="headerlink" title="异常类别"></a>异常类别</h2><ol>
-<li>运行时异常，编译器检查不出来，一般是变成时的逻辑错误，对于运行时异常，可以不做处理</li>
-<li>编译时异常，编译器要求必须处置的异常</li>
-</ol>
-<h2 id="常见运行时异常"><a href="#常见运行时异常" class="headerlink" title="常见运行时异常"></a>常见运行时异常</h2><ol>
-<li>NullPointerException：空指针异常</li>
-<li>ArithmeticException：数学运算异常</li>
-<li>ArrayIndexOutOfBoundsException：数组下标越界异常</li>
-<li>ClassCastException：类型转换异常</li>
-<li>NumberFormatException：数字格式不正确异常，将字符串转换为目标类型时会抛出</li>
-</ol>
-<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><ol>
-<li><p>try-catch-finally :代码块中捕获异常，程序员自己处理</p>
-<ol>
-<li><p>try代码块可以有多个异常，可以用多个catch分别捕获，子类异常写在前面，父类异常写在后面</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.trycatch_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TryCatch01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入一个整数&quot;</span>);</span><br><span class="line">            <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">            <span class="type">String</span> <span class="variable">next</span> <span class="operator">=</span> scanner.next();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                n = Integer.parseInt(next);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;输入的不是整数&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入的整数为:&quot;</span> + n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>throws：在方法中将发生的异常抛出，交给方法的调用者处理，最顶级的处理者就是JVM</p>
-<ol>
-<li>子类重写父类的方法，抛出异常不能扩大异常范围</li>
-<li>java中并不要求程序员显式处理运行异常，因为有默认处理机制，默认抛出，throws抛出运行异常在方法外可以不处理</li>
-</ol>
-</li>
-</ol>
-<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><ol>
-<li>定义类：自定义异常名，继承Exception 或 RuntimeException</li>
-<li>如果继承Exception，属于编译异常</li>
-<li>如果继承RuntimeExcepton 属于运行异常（一般使用运行时异常）</li>
-<li>使用throw关键字抛出异常</li>
-</ol>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ljd.exception_;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomeException01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">8</span>;</span><br><span class="line">        <span class="keyword">if</span>(!(age &gt;=<span class="number">18</span> &amp;&amp; age &lt;=<span class="number">120</span>))&#123;</span><br><span class="line">            <span class="comment">//可以通过构造器设置信息</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">AgeException</span>(<span class="string">&quot;年龄需要在 18~120 之间&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;年龄正确&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//自定义异常</span></span><br><span class="line"><span class="comment">//一般情况下，自定义异常继承RuntimeException</span></span><br><span class="line"><span class="comment">//好处是可以使用默认的异常处理机制</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AgeException</span> <span class="keyword">extends</span> <span class="title class_">RuntimeException</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">AgeException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="throw-与-throws"><a href="#throw-与-throws" class="headerlink" title="throw 与 throws"></a>throw 与 throws</h2><p>throws：在方法声明处，表示抛出的异常的类型</p>
-<p>throw：在方法体内，用于手动抛出异常对象</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1909,7 +1877,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
